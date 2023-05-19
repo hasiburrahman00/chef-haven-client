@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Swash:wght@400;700&family=Ubuntu:wght@400;500&display=swap');
+
+
+.recipe-category-title {
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 5px;
+    font-family: 'Cherry Swash', cursive;
+}
+
+.recipe-category-sub-title {
+    color: #606060;
+    font-size: 17px;
+    font-weight: 300;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 10px;
+    font-family: 'Ubuntu', sans-serif;
+}
