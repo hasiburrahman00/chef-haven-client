@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const Header = () => {
+
+    const { user, logout } = useContext(AuthContext);
+    const logoutUser = () => {
+        logout();
+    }
+
+
     return (
         <div>
             <div className="navbar bg-base-100">
@@ -20,14 +28,18 @@ const Header = () => {
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        <li><a>Home</a></li>
-                        <li><a>Blog</a></li>
-                        <li><a>Item 3</a></li>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/blog">Blog</Link></li>
+                        <li><Link to="/">Home</Link></li>
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link className='btn' to="/login">Login</Link>
-                    <Link className="btn ms-2" to="/register">Register</Link>
+                    
+                    {
+                        user ? <> {user.photoUrl}<img className='h-12 w-12 rounded-full' src={user?.photoURL} alt="" /> <Link className='btn ms-2' to="/login" onClick={logoutUser}>Logout</Link></> : 
+                        <><Link className='btn' to="/login">Login</Link>
+                        <Link className="btn ms-2" to="/register">Register</Link></>
+                    }
 
                 </div>
             </div>
