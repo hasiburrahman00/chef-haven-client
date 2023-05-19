@@ -27,7 +27,7 @@
     font-weight: 400;
     font-style: normal;
 }
-input {
+.banner-input {
     color: #ffffff;
     background: transparent;
     padding: 20px;
@@ -38,7 +38,7 @@ input {
     border-bottom-left-radius: 20px;
     outline: 0;
 }
-button {
+.banner-button {
     padding: 20px 40px;
     border: 0;
     border: 1px solid #fff; 

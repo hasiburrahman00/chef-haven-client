@@ -40,7 +40,7 @@ const Regiser = () => {
 
 
     return (
-        <div className='bg-[url("../../../public/images/banner.jpg")] bg-cover py-20 opacity-95 rounded-md'>
+        <div className='bg-[url("../../../public/images/banner.jpg")] bg-cover py-20 opacity-95 rounded-md text-center'>
             <div className='bg-slate-500  w-96 rounded-lg mx-auto py-12 bg-cover bg-center'>
                 <h2 className='text-center text-3xl text-white font-bold mb-8'>Register </h2>
                 <form onSubmit={hangleRegister}>

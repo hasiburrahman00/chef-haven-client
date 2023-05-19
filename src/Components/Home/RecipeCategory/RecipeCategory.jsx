@@ -5,9 +5,9 @@ import './RecipeCategory.css'
 const RecipeCategory = () => {
     return (
         <div>
-            <div className="w-4/5 mx-auto text-center my-8">
+            <div className="md:w-4/5 mx-auto text-center my-8">
                 <h2 className='recipe-category-title'>Most Popular Recipies</h2>
-                <p className='recipe-category-sub-title'>Excepteur sint occaecat cupidatat non qui proident, sunt culpa qui officia deserunmollit anim id est laborum.</p>
+                <p className='recipe-category-sub-title md:w-1/2'>Excepteur sint occaecat cupidatat non qui proident, sunt culpa qui officia deserunmollit anim id est laborum.</p>
             </div>
             <div className='w-4/5 mx-auto md:flex gap-4 gap-y-2'>
                 <div className="mb-4 card w-96 bg-base-100 shadow-xl">
