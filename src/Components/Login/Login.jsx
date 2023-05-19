@@ -14,8 +14,7 @@ const Login = () => {
 
 
     return (
-        
-        <div className='bg-[url("../../../public/images/login_page.jpg")] bg-cover py-20'>
+        <div className='bg-[url("../../../public/images/login_page.jpg")] bg-cover py-20 opacity-95'>
             <div className='bg-transparent border-2 w-96 rounded-lg mx-auto  py-12 my-20 bg-cover bg-center'>
                 <h2 className='text-center text-3xl text-white font-bold my-4'>Login </h2>
                 <form onSubmit={handleLogin}>
