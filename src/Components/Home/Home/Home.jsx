@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../../Provider/AuthProvider';
+import Banner from '../Banner/Banner';
 
 const Home = () => {
 
@@ -9,11 +10,7 @@ const Home = () => {
 
     return (
         <div>
-            <h2>This is home component </h2>
-            <h2>
-                <p>hello </p>
-                <img src={`https://lh3.googleusercontent.com/a/AGNmyxYw3uEDw5KfgXIwnedM_luZVREEjbxbQ1Yxm6Cl=s96-c`} alt="" />
-            </h2>
+            <Banner></Banner>
         </div>
     );
 };

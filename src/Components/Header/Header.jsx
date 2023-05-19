@@ -24,7 +24,7 @@ const Header = () => {
                             <li><a>Item 3</a></li>
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl">Chef Hunter</a>
+                    <a className="btn btn-ghost normal-case text-xl">chef Heaven</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -34,12 +34,13 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    
+
                     {
-                        user ? <> {user.photoUrl}<img className='h-12 w-12 rounded-full' src={user?.photoURL} alt="" /> <Link className='btn ms-2' to="/login" onClick={logoutUser}>Logout</Link></> : 
-                        <><Link className='btn' to="/login">Login</Link>
-                        <Link className="btn ms-2" to="/register">Register</Link></>
+                        user ? <> {user.photoUrl}<div className="tooltip" data-tip={user.displayName? user.displayName : ''}><img className={`h-12 w-12 rounded-full tooltip`} src={user?.photoURL} alt="" /></div> <Link className='btn ms-2' to="/login" onClick={logoutUser}>Logout</Link></> :
+                            <><Link className='btn' to="/login">Login</Link>
+                                <Link className="btn ms-2" to="/register">Register</Link></>
                     }
+
 
                 </div>
             </div>
