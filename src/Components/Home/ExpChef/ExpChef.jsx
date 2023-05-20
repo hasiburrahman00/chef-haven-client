@@ -26,7 +26,7 @@ const ExpChef = () => {
                 }
             </div>
             <div className='text-center mt-8'>
-                <Link className="btn btn-warning">Load More</Link>
+                <Link to="/all-chefs" className="btn btn-warning">Load More</Link>
             </div>
         </div>
     );
