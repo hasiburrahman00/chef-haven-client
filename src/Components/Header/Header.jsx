@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
+import { BeatLoader } from 'react-spinners';
 
 const Header = () => {
 
-    const { user, logout } = useContext(AuthContext);
+    const { user, logout, loading } = useContext(AuthContext);
     const logoutUser = () => {
         logout();
     }
@@ -34,13 +35,11 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-
                     {
-                        user ? <> {user.photoUrl}<div className="tooltip tooltip-left" data-tip={user.displayName ? user.displayName : ''}><img className={`h-12 w-12 rounded-full tooltip`} src={user?.photoURL} alt="" /></div> <Link className='btn ms-2' to="/login" onClick={logoutUser}>Logout</Link></> :
-                            <><Link className='btn' to="/login">Login</Link>
-                                <Link className="btn ms-2" to="/register">Register</Link></>
+                        loading ? <BeatLoader color="#36d7b7" /> : user ? <> {user.photoUrl}<div className="tooltip tooltip-left" data-tip={user.displayName ? user.displayName : ''}><img className={`h-12 w-12 rounded-full tooltip`} src={user?.photoURL} alt="" /></div> <Link className='btn btn-warning ms-2' to="/login" onClick={logoutUser}>Logout</Link></> :
+                            <><Link className='btn btn-warning' to="/login">Login</Link>
+                                <Link className="btn ms-2 btn-error" to="/register">Register</Link></>
                     }
-
 
                 </div>
             </div>
