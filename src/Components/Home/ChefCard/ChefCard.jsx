@@ -23,7 +23,7 @@ const ChefCard = ({ chef }) => {
                     </div>
                 </div>
                 <div className="card-actions justify-start">
-                    <Link to={`/chefData/${id}`} className="btn btn-success py-4 ">Show Details</Link>
+                    <Link to={`/chefData/${id}`} className="btn btn-outline btn-success py-4 ">View recipe</Link>
                 </div>
             </div>
         </div>

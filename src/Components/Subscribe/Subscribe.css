@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Swash:wght@400;700&family=Signika:wght@300;400;500;600&display=swap');
+
+.subscribe {
+    background-image: url('/images/subscribe-banner.jpg');
+
+}
+
+.subscribe-title {
+    font-family: "Signika";
+    font-size: 36px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.subscribe-sub-title {
+    font-family: "Signika";
+    font-size: 18px;
+    padding-top: 5px;
+    text-align: center;
+    color: #fff;
+    font-weight: 300;
+}
+.subscribe-btn {
+    font-family: "Signika";
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px solid transparent;
+    background-color: #518f2d;
+    padding: 15px 40px!important;
+    margin: 10px 0!important;
+    font-size: 15px!important;
+    line-height: 16px!important;
+    font-size: 18px;
+    transition: .6s;
+}
+.subscribe-btn:hover {
+    background-color: transparent;
+    border: 1px solid #518f2d;
+
+}
