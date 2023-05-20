@@ -22,7 +22,7 @@ const Header = () => {
                         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                             <li><Link to="/">Home</Link></li>
                             <li><Link to="/blog">Blog</Link></li>
-                            <li><Link to="/">Chefs</Link></li>
+                            <li><Link to="/all-chefs">Chefs</Link></li>
                         </ul>
                     </div>
                     <Link className="btn btn-ghost normal-case text-2xl" to="/">chef Heaven</Link>

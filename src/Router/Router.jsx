@@ -9,6 +9,7 @@ import Regiser from "../Components/Register/Regiser";
 import ChefDetails from "../Components/ChefDetails/ChefDetails";
 import AllChefs from "../Components/AllChefs/AllChefs";
 import ErrorPage from "../Components/ErrorPage/ErrorPage";
+import Blogs from "../Components/Blogs/Blogs";
 
 
 const router = createBrowserRouter([
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
                 path: 'chefData/:id',
                 element: <ChefDetails></ChefDetails>,
                 loader: ({params}) => fetch(`http://localhost:5000/chefData/${params.id}`)
+            },
+            {
+                path: 'blog',
+                element: <Blogs></Blogs>
             },
             {
                 path: 'all-chefs', 
