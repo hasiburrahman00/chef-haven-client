@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { GrFavorite } from 'react-icons/gr';
+import { toast } from 'react-toastify';
 
 const RecipeCard = ({ recipe }) => {
     const { name, ingredients, instructions } = recipe;
-    console.log(recipe);
+    const [favourite, setFavourite] = useState(false);
+
+    const handleAddFav = () => {
+        toast("Add to Favourite Successfully");
+        setFavourite(!favourite);
+        console.log(favourite);
+    }
+
     return (
         <div>
             <div className="card w-full h-full bg-base-100 shadow-xl mb-4 md:mb-0">
@@ -18,7 +26,7 @@ const RecipeCard = ({ recipe }) => {
                         }
                     </ol>
                     <div className="card-actions justify-start mt-8">
-                        <button className="btn btn-outline btn-error"><GrFavorite className='text-rose-500 mr-2 text-2xl'/> Add to Favourite</button>
+                        <button onClick={handleAddFav} className={`btn btn-outline btn-error ${favourite === false ? '': 'btn-disabled'}`}><GrFavorite className='text-rose-500 mr-2 text-2xl'/> Add to Favourite</button>
                     </div>
                 </div>
             </div>

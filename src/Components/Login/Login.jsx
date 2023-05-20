@@ -1,6 +1,8 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
 
@@ -17,8 +19,9 @@ const Login = () => {
         loginUser(email, password)
             .then(userCredential => {
                 const user = userCredential.user;
+                console.log(user);
                 form.reset();
-                console.log(user)
+                toast("Login Successfully");
             })
             .catch(error => {
                 setError(error.message);
@@ -31,6 +34,7 @@ const Login = () => {
             .then(userCredential => {
                 const user = userCredential.user;
                 console.log(user);
+                toast("Login Account Successfully");
             })
             .catch(error => {
                 setError(error.message);
@@ -42,6 +46,7 @@ const Login = () => {
             .then(userCredential => {
                 const user = userCredential.user;
                 console.log(user);
+                toast("Login Account Successfully");
             })
             .catch(error => {
                 setError(error.message);

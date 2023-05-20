@@ -36,7 +36,7 @@ const Header = () => {
                 <div className="navbar-end">
 
                     {
-                        user ? <> {user.photoUrl}<div className="tooltip" data-tip={user.displayName ? user.displayName : ''}><img className={`h-12 w-12 rounded-full tooltip`} src={user?.photoURL} alt="" /></div> <Link className='btn ms-2' to="/login" onClick={logoutUser}>Logout</Link></> :
+                        user ? <> {user.photoUrl}<div className="tooltip tooltip-left" data-tip={user.displayName ? user.displayName : ''}><img className={`h-12 w-12 rounded-full tooltip`} src={user?.photoURL} alt="" /></div> <Link className='btn ms-2' to="/login" onClick={logoutUser}>Logout</Link></> :
                             <><Link className='btn' to="/login">Login</Link>
                                 <Link className="btn ms-2" to="/register">Register</Link></>
                     }
