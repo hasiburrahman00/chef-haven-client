@@ -18,4 +18,3 @@ const Banner = () => {
 
 export default Banner;
 
-// bg-[url("/images/banner.jpg")] w-full h-full py-40 bg-cover bg-no-repeat
