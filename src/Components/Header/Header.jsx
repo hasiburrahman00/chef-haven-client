@@ -37,7 +37,7 @@ const Header = () => {
                 </div>
                 <div className="navbar-end">
                     {
-                        loading ? <BeatLoader color="#36d7b7" /> : user ? <> {user.photoUrl}<div className="tooltip tooltip-left" data-tip={user.displayName ? user.displayName : ''}><img className={`h-12 w-12 rounded-full tooltip`} src={user?.photoURL} alt="" /></div> <Link className='btn btn-warning ms-2' to="/login" onClick={logoutUser}>Logout</Link></> :
+                        user ? <> {user.photoUrl}<div className="tooltip tooltip-left" data-tip={user.displayName ? user.displayName : ''}><img className={`h-12 w-12 rounded-full tooltip`} src={user?.photoURL} alt="" /></div> <Link className='btn btn-warning ms-2' to="/login" onClick={logoutUser}>Logout</Link></> :
                             <><Link className='btn btn-warning' to="/login">Login</Link>
                                 <Link className="btn ms-2 btn-error" to="/register">Register</Link></>
                     }

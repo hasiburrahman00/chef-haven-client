@@ -19,7 +19,7 @@ const ExpChef = () => {
             <div className='md:grid md:grid-cols-3 gap-12 w-10/12 mx-auto mt-8'>
                 {
                     experianceChef.map((chef) => <ChefCard
-                        id={chef?.id}
+                        key={chef?.id}
                         chef={chef}
 
                     />)

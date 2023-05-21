@@ -5,7 +5,7 @@ import { FcLike } from 'react-icons/fc';
 const ChefCard = ({ chef }) => {
 
     const { name, id, picture, experience, recipes, likes } = chef;
-    console.log(name)
+    
 
 
     return (

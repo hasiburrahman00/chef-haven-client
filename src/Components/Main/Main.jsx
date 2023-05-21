@@ -12,7 +12,6 @@ const Main = () => {
             <ToastContainer />
             <Outlet></Outlet>
             <Footer></Footer>
-            <Loader></Loader>
         </div>
     );
 };

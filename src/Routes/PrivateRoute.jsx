@@ -7,7 +7,6 @@ const PrivateRoute = ({ children }) => {
     const { user, loading } = useContext(AuthContext);
 
     const location = useLocation();
-    console.log(location)
 
     if (loading) {
         return <BeatLoader color="#36d7b7" />
