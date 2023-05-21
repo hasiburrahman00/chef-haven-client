@@ -2,6 +2,8 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AiOutlineArrowDown } from 'react-icons/ai';
 import RecipeCard from '../RecipeCard/RecipeCard';
+import { Rating } from '@smastrom/react-rating'
+import '@smastrom/react-rating/style.css'
 
 const ChefDetails = () => {
 
@@ -18,8 +20,9 @@ const ChefDetails = () => {
                         <p className='grow-0'><span className='font-bold'>Country: </span>South Koria</p>
                         <p className='grow-0'><span className='font-bold'>Experience: </span>{experience} Years plus</p>
                         <p className='text-justify'><span className='font-bold'>Description: </span>{description}</p>
-                        <div className="card-actions justify-start">
+                        <div className="card-actions flex items-center justify-start">
                             <button className="btn btn-warning">Show Recipes <AiOutlineArrowDown className='ms-2' /></button>
+                            <Rating className='ms-auto' style={{ maxWidth: 180 }} value={5} />
                         </div>
                     </div>
                 </div>

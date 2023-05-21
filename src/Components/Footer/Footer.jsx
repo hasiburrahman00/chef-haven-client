@@ -6,7 +6,7 @@ import { BsTelephone } from 'react-icons/bs';
 
 const Footer = () => {
     return (
-        <div className={`${bg-[url("./images/footer.jpg")] || 'bg-slate-800'} text-white py-20`}>
+        <div className={`${'bg-[url("./images/footer.jpg")]' || 'bg-slate-800'} text-white py-20`}>
             <div className='md:flex w-10/12 mx-auto justify-between	'>
                 <div className='md:w-2/6 mb-12 md:mb-0'>
                     <h2 className='text-2xl font-bold mb-2 md:mb-8'>Subscribe</h2>
