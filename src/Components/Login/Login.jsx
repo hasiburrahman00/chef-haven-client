@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -8,6 +8,10 @@ const Login = () => {
 
     const { loginUser, loginUsingGoogle, loginUsingGithub } = useContext(AuthContext);
     const [error, setError] = useState('');
+    const location = useLocation();
+    const navigate = useNavigate();
+    const from = location?.state?.from?.pathname;
+    console.log(from);
 
 
     const handleLogin = (event) => {
@@ -21,6 +25,7 @@ const Login = () => {
                 const user = userCredential.user;
                 console.log(user);
                 form.reset();
+                navigate(from || '/');
                 toast("Login Successfully");
             })
             .catch(error => {
@@ -34,6 +39,7 @@ const Login = () => {
             .then(userCredential => {
                 const user = userCredential.user;
                 console.log(user);
+                navigate(from || '/');
                 toast("Login Account Successfully");
             })
             .catch(error => {
@@ -46,6 +52,7 @@ const Login = () => {
             .then(userCredential => {
                 const user = userCredential.user;
                 console.log(user);
+                navigate(from || '/');
                 toast("Login Account Successfully");
             })
             .catch(error => {

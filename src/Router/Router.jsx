@@ -10,6 +10,7 @@ import ChefDetails from "../Components/ChefDetails/ChefDetails";
 import AllChefs from "../Components/AllChefs/AllChefs";
 import ErrorPage from "../Components/ErrorPage/ErrorPage";
 import Blogs from "../Components/Blogs/Blogs";
+import PrivateRoute from "../Routes/PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
             }, 
             {
                 path: 'chefData/:id',
-                element: <ChefDetails></ChefDetails>,
+                element: <PrivateRoute><ChefDetails></ChefDetails></PrivateRoute>,
                 loader: ({params}) => fetch(`http://localhost:5000/chefData/${params.id}`)
             },
             {
