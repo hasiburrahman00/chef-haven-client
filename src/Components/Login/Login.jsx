@@ -63,7 +63,7 @@ const Login = () => {
 
     return (
         <div className='bg-[url("../../../public/images/login_page.jpg")] bg-cover py-20 opacity-95 rounded-lg text-center'>
-            <div className='bg-transparent border-2 w-96 rounded-lg mx-auto  py-12 my-20 bg-cover bg-center'>
+            <div className='bg-transparent border-2 w-96 rounded-lg mx-auto  py-12 my-20 bg-cover bg-center bg-slate-900'>
                 <h2 className='text-center text-3xl text-white font-bold my-4'>Sign in to Account </h2>
                 <form onSubmit={handleLogin}>
                     <input className='my-2 px-6 py-2 rounded-md outline-0 text-black' type="email" name="email" id="" placeholder='Enter Email' required />
@@ -75,8 +75,8 @@ const Login = () => {
                 <p className='text-white'>Not registered yet? <Link className='text-green-400' to="/register">create account</Link></p>
                 <div className='my-6'>
                     <p className='text-white'>OR</p>
-                    <button onClick={googleLogin} className="outline outline-offset-2 outline-1 rounded-xl text-white py-2 px-12 my-2">Login with Google</button>
-                    <button onClick={githubLogin} className="outline outline-offset-2 outline-1 rounded-xl text-white py-2 px-12 my-2">Login with Github</button>
+                    <button onClick={googleLogin} className="btn btn-error  rounded-xl text-white py-2 px-12 my-2">Login with Google</button>
+                    <button onClick={githubLogin} className="btn btn-warning rounded-xl text-white py-2 px-12 my-2">Login with Github</button>
                 </div>
             </div>
         </div>

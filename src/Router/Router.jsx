@@ -33,7 +33,7 @@ const router = createBrowserRouter([
             {
                 path: 'chefData/:id',
                 element: <PrivateRoute><ChefDetails></ChefDetails></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/chefData/${params.id}`)
+                loader: ({params}) => fetch(`https://chef-recipe-hunter-server-hasiburrahman00.vercel.app/chefData/${params.id}`)
             },
             {
                 path: 'blog',
@@ -42,7 +42,7 @@ const router = createBrowserRouter([
             {
                 path: 'all-chefs', 
                 element: <AllChefs></AllChefs>,
-                loader: () => fetch(`http://localhost:5000/chefData`)
+                loader: () => fetch(`https://chef-recipe-hunter-server-hasiburrahman00.vercel.app/chefData`)
             },
             {
                 path: '*', 

@@ -7,7 +7,7 @@ const ExpChef = () => {
     const [experianceChef, setExperianceChef] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/experianced')
+        fetch('https://chef-recipe-hunter-server-hasiburrahman00.vercel.app/experianced')
             .then(res => res.json())
             .then(data => setExperianceChef(data))
     }, [])
